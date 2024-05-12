@@ -2,51 +2,59 @@
 <html>
 
 <head>
-	<title>马伟凡sb</title>
-	<meta charset="utf-8" />
-	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<meta name='robots' content='index,follow'>
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<noscript>
-		<link rel="stylesheet" href="assets/css/noscript.css" />
-	</noscript>
+    <title>马伟凡sb</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name='robots' content='index,follow'>
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
 </head>
 
 <body class="is-preload">
-	<div id="wrapper">
-		<div id="bg"></div>
-		<div id="overlay"></div>
-		<div id="main">
+    <div id="wrapper">
+        <div id="bg"></div>
+        <div id="overlay"></div>
+        <div id="main">
 
-			<!-- Header -->
-			<header id="header">
-				<h1>We're gone ; forever</h1>
-				<p>&nbsp;&bull;&nbsp; We've closed the service, and not coming back. &nbsp;&bull;&nbsp;</p>
-			</header>
+            <!-- Header -->
+            <header id="header">
+                <h1>We're gone ; forever</h1>
+                <p>&nbsp;&bull;&nbsp; We've closed the service, and not coming back. &nbsp;&bull;&nbsp;</p>
+            </header>
 
-			<!-- Footer -->
-			<footer id="footer">
-				<span class="copyright">&copy; 2023-2024 马伟凡sb丨2024.6.7 End</span>
-			</footer>
+            <!-- Footer -->
+            <footer id="footer">
+                <span class="copyright">&copy; 2023-2024 马伟凡sb丨2024.6.7 End</span>
+            </footer>
 
-		</div>
-	</div>
-	<audio autoplay loop>
-		<source src="./soft.mp3" type="audio/mpeg">
-		Your browser does not support the audio element.
-	</audio>
-	<script>
-		window.onload = function () { document.body.classList.remove('is-preload'); }
-		window.ontouchmove = function () { return false; }
-		window.onorientationchange = function () { document.body.scrollTop = 0; }
-	</script>
+        </div>
+    </div>
 
-	<script>
-		console.log("%c%cmwfsb%chttp://mwfsb.top", "line-height:28px;", "line-height:28px;padding:4px;background:#2ccbe6;color:#FADFA3;font-size:14px;", "padding:4px 4px 4px 2px;background:#ff146d;color:green;line-height:28px;font-size:12px;");
-	</script>
-	<script disable-devtool-auto src='http://fastly.jsdelivr.net/npm/disable-devtool@latest/disable-devtool.min.js'
-		disable-menu='false'></script>
+    <!-- Audio Element -->
+    <audio id="audioPlayer" src="soft.mp3" loop autoplay>
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        window.onload = function () { document.body.classList.remove('is-preload'); }
+        window.ontouchmove = function () { return false; }
+        window.onorientationchange = function () { document.body.scrollTop = 0; }
+
+        // Ensure the audio file is looped
+        const audio = document.getElementById('audioPlayer');
+        audio.addEventListener('ended', function () {
+            this.currentTime = 0;
+            this.play();
+        }, false);
+    </script>
+
+    <script>
+        console.log("%c%cmwfsb%chttp://mwfsb.top", "line-height:28px;", "line-height:28px;padding:4px;background:#2ccbe6;color:#FADFA3;font-size:14px;", "padding:4px 4px 4px 2px;background:#ff146d;color:green;line-height:28px;font-size:12px;");
+    </script>
+    <script disable-devtool-auto src='http://fastly.jsdelivr.net/npm/disable-devtool@latest/disable-devtool.min.js' disable-menu='false'></script>
 </body>
 
 </html>
